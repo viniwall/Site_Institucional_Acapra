@@ -10,6 +10,6 @@ O site foi desenvolvido com **HTML** e **CSS** com o objetivo de:
 - Conscientizar sobre maus-tratos
 
 ##  Estrutura do Projeto
-- index.html # Página principal do site
-- style.css # Estilos do site
-- /imgs # Imagens utilizadas no projeto
+- index.html --> Página principal do site
+- style.css --> Estilos do site
+- /imgs --> Imagens utilizadas no projeto
