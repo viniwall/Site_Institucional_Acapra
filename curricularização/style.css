@@ -12,7 +12,7 @@
     outline: none;
     border: none;
     text-decoration: none;
-    text-transform: initia capitalize;
+    text-transform: initial capitalize;
     font-family: "Roboto", sans-serif;
     transition: 0.2s linear;
 }
@@ -211,4 +211,5 @@ section {
     color: var(--black);
 
 }
+
 
