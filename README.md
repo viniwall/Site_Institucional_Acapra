@@ -12,4 +12,4 @@ O site foi desenvolvido com **HTML** e **CSS** com o objetivo de:
 ##  Estrutura do Projeto
 - index.html --> Página principal do site
 - style.css --> Estilos do site
-- /imgs --> Imagens utilizadas no projet
+- /imgs --> Imagens utilizadas no projeto
