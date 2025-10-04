@@ -1,0 +1,295 @@
+:root {
+    --main-color: #8587ff;
+    --black: #13131a;
+    --bg: #010103;
+    --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+    font-size: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: initial capitalize;
+    font-family: "Roboto", sans-serif;
+    transition: 0.2s linear;
+}
+
+body {
+    background-color: var(--bg);
+}
+
+section {
+    padding: 3rem 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    border-bottom: var(--border);
+    background-color: var(--bg);
+}
+
+.header section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    padding-bottom: 0.01rem;
+}
+
+#logo {
+    width: 70px;
+    height: 70px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.navbar a {
+    margin: 0 2.5rem;
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+    border-bottom: 0.1rem solid var(--main-color);
+    padding-bottom: 0.5rem;
+}
+
+.icons img {
+    margin: 0;
+    width: 15rem;
+    position: absolute;
+    left: 1250px;
+    bottom: -16.9px;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+}
+
+
+.btn {
+    background: var(--main-color);
+    color: #ffff;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+.btn:hover {
+    letter-spacing: 0.05rem;
+    background-color: #d1d2ff;
+}
+
+.home-container {
+    background: url(imgs/imageedit_1_7858596949.png);
+    height: 80vh;
+    background-position: bottom;
+    background: cover;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.home-container section {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url();
+}
+
+.content {
+    max-width: 100rem;
+    background-color: rgba(19, 19, 26, 0.9);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.content h3 {
+    color: #fff;
+    font-size: 3rem;
+}
+
+.content p {
+    color: #ffff;
+    font-size: 1.7rem;
+    font-weight: 100;
+    line-height: 1.8;
+    padding: 1rem 0rem;
+}
+
+.title {
+    font-size: 4rem;
+    color: var(--main-color);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+}
+
+.title span {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+    position: relative;
+}
+
+.box {
+    text-align: center;
+    border: var(--border);
+    padding: 5rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    background-color: var(--black);
+}
+
+.box img {
+    width: 30rem;
+    height: 25rem;
+    position: relative;
+}
+
+.box h3 {
+    color: #fff;
+    font-size: 2rem;
+    padding: 1rem 0;
+    position: relative;
+}
+
+.about .row {
+    display: flex;
+    align-items: center;
+    background-color: var(--black);
+    gap: 1.5rem;
+    position: relative;
+}
+
+#gato2025 {
+    width: 30rem;
+}
+
+.his-miss {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.his-miss .icons img {
+    width: 40rem;
+    height: 15rem;
+    position: absolute;
+    left: 8rem;
+    bottom: 36.5rem;
+}
+
+.his-miss .content {
+    position: static;
+}
+
+#donate-title {
+    margin-bottom: 1rem;
+}
+
+.animais-doados p {
+    padding: 1.9rem;
+    color: #fff;
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 4rem;
+    background-color: #1a1a33;
+    border-radius: 2rem;
+}
+
+.animais-doados .box-container .box::before {
+    content: '';
+    background-image: url(imgs/fundo-removebg-preview.png);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: -0.1rem;
+    opacity: 15%;
+}
+
+.mautrato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mautrato #mau-trato-title {
+    color: red;
+}
+
+.mautrato .content span {
+    color: red;
+    text-transform: uppercase;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.news .box-container .box:hover {
+    background-color: #fff;    
+}
+
+.news .box-container .box .btn:hover {
+    color: #83738d;
+}
+
+.news .box-container .box:hover>* {
+    color: var(--bg);
+}
+
+footer {
+    background-color: #1a1a33;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.rodape {
+    color: #fff;
+    font-size: 1.5rem;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.rodape a {
+    color: #fff;
+}
+
+.rodape a:hover {
+    color:rgb(85, 7, 187)
+}
