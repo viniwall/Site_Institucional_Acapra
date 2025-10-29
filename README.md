@@ -13,3 +13,4 @@ O site foi desenvolvido com **HTML** e **CSS** com o objetivo de:
 - index.html --> Página principal do site
 - style.css --> Estilos do site
 - /imgs --> Imagens utilizadas no projeto
+- script.js --> Estilização por meio de JavaScript 

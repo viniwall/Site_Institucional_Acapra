@@ -1,13 +1,13 @@
-(function() {
+(function () {
     'use strict';
 
     const initSmoothScroll = () => {
         document.querySelectorAll('.navbar a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const targetId = this.getAttribute('href');
                 const targetElement = document.querySelector(targetId);
-                
+
                 if (targetElement) {
                     const headerOffset = 100;
                     const elementPosition = targetElement.getBoundingClientRect().top;
@@ -29,7 +29,7 @@
 
     const initHeaderScroll = () => {
         const header = document.querySelector('.header');
-        
+
         window.addEventListener('scroll', () => {
             if (window.scrollY > 100) {
                 header.classList.add('scrolled');
@@ -68,7 +68,7 @@
         });
 
         window.addEventListener('scroll', revealOnScroll);
-        revealOnScroll(); 
+        revealOnScroll();
     };
 
     const initActiveNavOnScroll = () => {
@@ -99,7 +99,7 @@
 
     const initParallax = () => {
         const homeContainer = document.querySelector('.home-container');
-        
+
         if (homeContainer) {
             window.addEventListener('scroll', () => {
                 const scrolled = window.pageYOffset;
@@ -117,10 +117,10 @@
                 const rect = card.getBoundingClientRect();
                 const x = e.clientX - rect.left;
                 const y = e.clientY - rect.top;
-                
+
                 const centerX = rect.width / 2;
                 const centerY = rect.height / 2;
-                
+
                 const rotateX = (y - centerY) / 10;
                 const rotateY = (centerX - x) / 10;
 
@@ -148,11 +148,11 @@
 
             if (statsSectionTop < windowHeight - 100) {
                 counted = true;
-                
+
                 numbers.forEach(paragraph => {
                     const text = paragraph.textContent;
                     const numberMatch = text.match(/\d+/);
-                    
+
                     if (numberMatch) {
                         const finalNumber = parseInt(numberMatch[0]);
                         const duration = 2000;
@@ -164,7 +164,7 @@
                         const counter = setInterval(() => {
                             current += increment;
                             step++;
-                            
+
                             if (step >= steps) {
                                 current = finalNumber;
                                 clearInterval(counter);
@@ -185,7 +185,7 @@
         const buttons = document.querySelectorAll('.btn');
 
         buttons.forEach(button => {
-            button.addEventListener('click', function(e) {
+            button.addEventListener('click', function (e) {
                 const ripple = document.createElement('span');
                 const rect = this.getBoundingClientRect();
                 const size = Math.max(rect.width, rect.height);
@@ -222,7 +222,7 @@
             @keyframes ripple-animation {
                 to {
                     transform: scale(4);
-                    opacity: 0;
+                    opacity: 1;
                 }
             }
         `;
@@ -236,9 +236,9 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const img = entry.target;
-                    img.style.opacity = '0';
+                    img.style.opacity = '1';
                     img.style.transition = 'opacity 0.5s ease';
-                    
+
                     img.addEventListener('load', () => {
                         img.style.opacity = '1';
                     });
@@ -253,7 +253,7 @@
 
     const initFloatingIcons = () => {
         const icons = document.querySelectorAll('.icons img');
-        
+
         icons.forEach((icon, index) => {
             const delay = index * 0.5;
             icon.style.animationDelay = `${delay}s`;
@@ -281,7 +281,7 @@
                 font-size: 24px;
                 border: none;
                 cursor: pointer;
-                opacity: 0;
+                opacity: 1;
                 visibility: hidden;
                 transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
                 z-index: 1000;
@@ -319,7 +319,7 @@
 
     const initPageLoad = () => {
         window.addEventListener('load', () => {
-            document.body.style.opacity = '0';
+            document.body.style.opacity = '1';
             setTimeout(() => {
                 document.body.style.transition = 'opacity 0.5s ease';
                 document.body.style.opacity = '1';
@@ -329,7 +329,7 @@
 
     const init = () => {
         console.log('🐾 ACAPRA - Carregando experiência interativa...');
-        
+
         initSmoothScroll();
         initHeaderScroll();
         initScrollReveal();

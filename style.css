@@ -44,7 +44,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: 
+    background:
         radial-gradient(circle at 20% 50%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
         radial-gradient(circle at 80% 80%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
         radial-gradient(circle at 40% 20%, rgba(124, 58, 237, 0.05) 0%, transparent 50%);
@@ -101,13 +101,13 @@ section {
 #logo {
     width: 70px;
     height: 70px;
-    filter: drop-shadow(0 4px 12px rgba(139, 92, 246, 0.4));
+    filter: drop-shadow(0px 4px 12px rgba(139, 92, 246, 0.4));
     transition: var(--transition-smooth);
 }
 
 #logo:hover {
     transform: scale(1.1) rotate(5deg);
-    filter: drop-shadow(0 8px 20px rgba(139, 92, 246, 0.6));
+    filter: drop-shadow(0px 8px 20px rgba(139, 92, 246, 0.6));
 }
 
 .navbar {
@@ -155,16 +155,25 @@ section {
 .icons img {
     width: 15rem;
     position: absolute;
-    right: 2rem;
-    top: 50%;
+    right: 80rem;
+    top: 20.5%;
     transform: translateY(-50%);
     filter: drop-shadow(0 4px 12px rgba(139, 92, 246, 0.3));
     animation: float 3s ease-in-out infinite;
+    z-index: 1;
+    transition: var(--transition-smooth);
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(-50%) translateX(0); }
-    50% { transform: translateY(-50%) translateX(10px); }
+
+    0%,
+    100% {
+        transform: translateY(-50%) translateX(0);
+    }
+
+    50% {
+        transform: translateY(-50%) translateX(10px);
+    }
 }
 
 .btn {
@@ -213,8 +222,8 @@ section {
 }
 
 .home-container {
-    background: linear-gradient(135deg, rgba(5, 5, 16, 0.9), rgba(26, 26, 46, 0.8)), 
-                url(imgs/imageedit_1_7858596949.png);
+    background: linear-gradient(135deg, rgba(5, 5, 16, 0.9), rgba(26, 26, 46, 0.8)),
+        url(imgs/imageedit_1_7858596949.png);
     min-height: 100vh;
     background-position: center;
     background-size: cover;
@@ -260,6 +269,7 @@ section {
         opacity: 0;
         transform: scale(0.9) translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: scale(1) translateY(0);
@@ -460,6 +470,7 @@ section {
     margin-bottom: 2rem;
     filter: drop-shadow(0 4px 20px rgba(139, 92, 246, 0.4));
     animation: float 4s ease-in-out infinite;
+    transition: var(--transition-smooth);
 }
 
 .his-miss .content {
@@ -468,7 +479,7 @@ section {
     border: 1px solid rgba(167, 139, 250, 0.2);
 }
 
-.animais-doados > div:first-child p {
+.animais-doados>div:first-child p {
     padding: 2.5rem;
     color: var(--text-secondary);
     font-size: 1.8rem;
@@ -719,6 +730,7 @@ footer img {
         transform: none;
         margin-top: 2rem;
         width: 12rem;
+        transition: var(--transition-smooth);
     }
 
     .about .row {
@@ -733,6 +745,7 @@ footer img {
     .his-miss .icons img {
         position: static;
         margin-bottom: 3rem;
+        transition: var(--transition-smooth);
     }
 }
 
