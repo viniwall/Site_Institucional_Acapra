@@ -1,11 +1,6 @@
-// ACAPRA - Modern Interactive Enhancements
-// Author: Lovable AI
-// Description: JavaScript enhancements for smooth animations and interactivity
-
 (function() {
     'use strict';
 
-    // ===== Smooth Scroll for Navigation Links =====
     const initSmoothScroll = () => {
         document.querySelectorAll('.navbar a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
@@ -23,7 +18,6 @@
                         behavior: 'smooth'
                     });
 
-                    // Update active nav link
                     document.querySelectorAll('.navbar a').forEach(link => {
                         link.classList.remove('active');
                     });
@@ -33,7 +27,6 @@
         });
     };
 
-    // ===== Header Background on Scroll =====
     const initHeaderScroll = () => {
         const header = document.querySelector('.header');
         
@@ -46,7 +39,6 @@
         });
     };
 
-    // ===== Scroll Reveal Animations =====
     const initScrollReveal = () => {
         const revealElements = document.querySelectorAll(
             '.box, .about .row, .his-miss .content, .animais-doados > div, .mautrato .content, .stats .content'
@@ -60,7 +52,6 @@
                 const elementTop = element.getBoundingClientRect().top;
 
                 if (elementTop < windowHeight - revealPoint) {
-                    // Add staggered delay for boxes in grid
                     if (element.classList.contains('box')) {
                         setTimeout(() => {
                             element.classList.add('scroll-reveal', 'active');
@@ -72,16 +63,14 @@
             });
         };
 
-        // Add scroll-reveal class to all elements
         revealElements.forEach(element => {
             element.classList.add('scroll-reveal');
         });
 
         window.addEventListener('scroll', revealOnScroll);
-        revealOnScroll(); // Initial check
+        revealOnScroll(); 
     };
 
-    // ===== Active Navigation Highlight on Scroll =====
     const initActiveNavOnScroll = () => {
         const sections = document.querySelectorAll('section[id]');
         const navLinks = document.querySelectorAll('.navbar a[href^="#"]');
@@ -108,7 +97,6 @@
         window.addEventListener('scroll', highlightNav);
     };
 
-    // ===== Parallax Effect for Home Section =====
     const initParallax = () => {
         const homeContainer = document.querySelector('.home-container');
         
@@ -121,7 +109,6 @@
         }
     };
 
-    // ===== Card Tilt Effect =====
     const initCardTilt = () => {
         const cards = document.querySelectorAll('.box');
 
@@ -146,7 +133,6 @@
         });
     };
 
-    // ===== Animated Counter for Stats =====
     const initAnimatedCounters = () => {
         const statsSection = document.querySelector('.stats');
         if (!statsSection) return;
@@ -192,10 +178,9 @@
         };
 
         window.addEventListener('scroll', animateNumbers);
-        animateNumbers(); // Initial check
+        animateNumbers();
     };
 
-    // ===== Button Ripple Effect =====
     const initButtonRipple = () => {
         const buttons = document.querySelectorAll('.btn');
 
@@ -220,7 +205,6 @@
             });
         });
 
-        // Add ripple CSS dynamically
         const style = document.createElement('style');
         style.textContent = `
             .btn {
@@ -245,7 +229,6 @@
         document.head.appendChild(style);
     };
 
-    // ===== Lazy Loading for Images =====
     const initLazyLoad = () => {
         const images = document.querySelectorAll('img[src]');
 
@@ -268,7 +251,6 @@
         images.forEach(img => imageObserver.observe(img));
     };
 
-    // ===== Floating Animation for Icons =====
     const initFloatingIcons = () => {
         const icons = document.querySelectorAll('.icons img');
         
@@ -278,7 +260,6 @@
         });
     };
 
-    // ===== Back to Top Button =====
     const initBackToTop = () => {
         const backToTopBtn = document.createElement('button');
         backToTopBtn.innerHTML = '↑';
@@ -286,7 +267,6 @@
         backToTopBtn.setAttribute('aria-label', 'Voltar ao topo');
         document.body.appendChild(backToTopBtn);
 
-        // Add styles
         const style = document.createElement('style');
         style.textContent = `
             .back-to-top {
@@ -321,7 +301,6 @@
         `;
         document.head.appendChild(style);
 
-        // Show/hide button on scroll
         window.addEventListener('scroll', () => {
             if (window.pageYOffset > 300) {
                 backToTopBtn.classList.add('visible');
@@ -330,7 +309,6 @@
             }
         });
 
-        // Scroll to top on click
         backToTopBtn.addEventListener('click', () => {
             window.scrollTo({
                 top: 0,
@@ -339,7 +317,6 @@
         });
     };
 
-    // ===== Loading Animation =====
     const initPageLoad = () => {
         window.addEventListener('load', () => {
             document.body.style.opacity = '0';
@@ -350,7 +327,6 @@
         });
     };
 
-    // ===== Initialize All Functions =====
     const init = () => {
         console.log('🐾 ACAPRA - Carregando experiência interativa...');
         
@@ -370,7 +346,6 @@
         console.log('✨ ACAPRA - Pronto para navegar!');
     };
 
-    // Run when DOM is ready
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);
     } else {
