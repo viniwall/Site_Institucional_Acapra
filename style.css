@@ -70,7 +70,6 @@ section {
     }
 }
 
-/* Header Styles */
 .header {
     position: fixed;
     top: 0;
@@ -168,7 +167,6 @@ section {
     50% { transform: translateY(-50%) translateX(10px); }
 }
 
-/* Button Styles */
 .btn {
     background: var(--main-gradient);
     color: #fff;
@@ -214,7 +212,6 @@ section {
     transform: translateY(-1px);
 }
 
-/* Home Section */
 .home-container {
     background: linear-gradient(135deg, rgba(5, 5, 16, 0.9), rgba(26, 26, 46, 0.8)), 
                 url(imgs/imageedit_1_7858596949.png);
@@ -287,7 +284,6 @@ section {
     line-height: 1.8;
 }
 
-/* Title Styles */
 .title {
     font-size: 4.5rem;
     text-align: center;
@@ -359,7 +355,6 @@ section {
     color: var(--main-color);
 }
 
-/* Box Container & Cards */
 .box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
@@ -422,7 +417,6 @@ section {
     z-index: 2;
 }
 
-/* About Section */
 .about .row {
     display: flex;
     align-items: center;
@@ -454,7 +448,6 @@ section {
     flex: 1.5;
 }
 
-/* History & Mission Section */
 .his-miss {
     display: flex;
     flex-direction: column;
@@ -475,7 +468,6 @@ section {
     border: 1px solid rgba(167, 139, 250, 0.2);
 }
 
-/* Animals Donated Section */
 .animais-doados > div:first-child p {
     padding: 2.5rem;
     color: var(--text-secondary);
@@ -510,7 +502,6 @@ section {
     opacity: 0.15;
 }
 
-/* Abuse Section */
 .mautrato {
     display: flex;
     flex-direction: column;
@@ -538,7 +529,6 @@ section {
     font-weight: 700;
 }
 
-/* Stats Section */
 .stats {
     display: flex;
     flex-direction: column;
@@ -562,7 +552,6 @@ section {
     font-weight: 600;
 }
 
-/* News Section */
 .news .box-container .box {
     display: flex;
     flex-direction: column;
@@ -590,7 +579,6 @@ section {
     color: #fff;
 }
 
-/* Footer */
 footer {
     background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
     padding: 4rem 2rem;
@@ -673,7 +661,6 @@ footer img {
     filter: drop-shadow(0 4px 20px rgba(139, 92, 246, 0.3));
 }
 
-/* Scroll Animations */
 .scroll-reveal {
     opacity: 0;
     transform: translateY(50px);
@@ -707,7 +694,6 @@ footer img {
     transform: translateX(0);
 }
 
-/* Responsive Design */
 @media (max-width: 991px) {
     html {
         font-size: 55%;
